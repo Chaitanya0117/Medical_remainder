@@ -1,0 +1,296 @@
+/* ---------- GENERAL ---------- */
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  background: url('medicalbg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #222;
+}
+
+/* ---------- TOPBAR ---------- */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #0077cc;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+.topbar .logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.avatar-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  color: #0077cc;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+/* ---------- TABS ---------- */
+.tab-container {
+  display: flex;
+  background: #ffffff;
+  padding: 10px 20px;
+  gap: 10px;
+  position: sticky;
+  top: 70px;
+  border-bottom: 1px solid #ddd;
+  z-index: 999;
+}
+.tab-btn {
+  flex: 1;
+  padding: 12px;
+  background: #f0f6ff;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.tab-btn:hover {
+  background: #d9eaff;
+}
+.tab-btn.active {
+  background: #0077cc;
+  color: white;
+}
+
+/* ---------- TAB CONTENT ---------- */
+.tab-content {
+  padding: 120px 20px 40px;
+  max-width: 900px;
+  margin: auto;
+}
+.tab-panel {
+  display: none;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+}
+.tab-panel.active {
+  display: block;
+}
+
+/* ---------- QUICK SUMMARY ---------- */
+.quick-summary {
+  background: #f8faff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+.quick-summary h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+}
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+.summary-item:last-child {
+  border-bottom: none;
+}
+.summary-item span:first-child {
+  font-weight: 600;
+  color: #555;
+}
+.summary-item span:last-child {
+  color: #222;
+}
+
+/* ---------- PROFILE ---------- */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile-avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #d1e3f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 42px;
+  color: #0077cc;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ---------- FORMS ---------- */
+form {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f9fbff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+form input, form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+}
+button, .btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+.btn-primary {
+  background: #0077cc;
+  color: white;
+}
+.btn-primary:hover {
+  background: #005fa3;
+}
+.btn-secondary {
+  background: #f44336;
+  color: white;
+}
+.btn-secondary:hover {
+  background: #d32f2f;
+}
+.btn.small {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+/* ---------- LISTS ---------- */
+.item-list {
+  list-style: none;
+  padding: 0;
+}
+.item-list li {
+  background: #f8faff;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.item-list li button {
+  background: none;
+  color: #f44336;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* ---------- FORM INLINE ---------- */
+.form-inline {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.form-inline input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f9fbff;
+}
+
+/* ---------- ITEM CONTAINERS (RECORDS, REMINDERS, APPOINTMENTS) ---------- */
+.item-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+.item-card {
+  background: #f0f6ff;
+  padding: 12px 15px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s;
+}
+.item-card:hover {
+  transform: translateY(-2px);
+}
+.item-card button {
+  background: #f44336;
+  color: white;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  border: none;
+}
+
+/* ---------- TOAST NOTIFICATIONS ---------- */
+#toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+.toast {
+  padding: 12px 20px;
+  margin-top: 10px;
+  border-radius: 6px;
+  color: white;
+  background: #333;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  animation: fadein 0.3s ease, fadeout 0.3s ease 3.7s;
+}
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeout {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(10px); }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .tab-container {
+    flex-direction: column;
+  }
+  .form-inline {
+    flex-direction: column;
+  }
+}

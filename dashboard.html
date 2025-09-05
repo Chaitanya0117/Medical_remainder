@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Medical Advisor</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <div class="topbar">
+    <div class="logo">Medical Advisor</div>
+    <div class="topbar-right">
+      <div id="avatar-circle" class="avatar-circle">U</div>
+      <button id="logout-btn" class="btn btn-secondary small">Logout</button>
+    </div>
+  </div>
+
+  <!-- Tabs Navigation -->
+  <div class="tab-container">
+    <button class="tab-btn active" data-tab="profile">Profile</button>
+    <button class="tab-btn" data-tab="records">Health Records</button>
+    <button class="tab-btn" data-tab="reminders">Reminders</button>
+    <button class="tab-btn" data-tab="appointments">Appointments</button>
+  </div>
+
+  <!-- Tab Contents -->
+  <div class="tab-content">
+
+    <!-- Quick Summary -->
+    <section class="quick-summary">
+      <h2>Quick Summary</h2>
+      <div class="summary-item"><span>Blood Type:</span><span id="summary-blood-type">Not set</span></div>
+      <div class="summary-item"><span>Allergies:</span><span id="summary-allergies">None</span></div>
+      <div class="summary-item"><span>ABHA ID:</span><span id="summary-abha-id">Not set</span></div>
+      <div class="summary-item"><span>Emergency Contact:</span><span id="summary-emergency-contact">Not set</span></div>
+    </section>
+
+    <!-- Profile Tab -->
+    <div id="tab-profile" class="tab-panel active">
+      <h2>Your Profile</h2>
+      <div class="profile-section">
+        <div id="profile-avatar" class="profile-avatar">U</div>
+        <input type="file" id="profile-upload" accept="image/*">
+        <button id="upload-btn" class="btn btn-primary small">Upload Picture</button>
+      </div>
+      <p><strong>Username:</strong> <span id="username-display"></span></p>
+      <p><strong>Email:</strong> <span id="email-display"></span></p>
+
+      <h3>Personal & Medical Details</h3>
+      <form id="all-details-form">
+        <label for="edit-phone">Phone Number:</label>
+        <input type="text" id="edit-phone" placeholder="Enter phone number">
+
+        <label for="edit-address">Address:</label>
+        <input type="text" id="edit-address" placeholder="Enter address">
+
+        <label for="blood-type">Blood Type:</label>
+        <select id="blood-type">
+          <option value="">Select</option>
+          <option>A+</option><option>A-</option>
+          <option>B+</option><option>B-</option>
+          <option>AB+</option><option>AB-</option>
+          <option>O+</option><option>O-</option>
+        </select>
+
+        <label for="allergies">Allergies (comma separated):</label>
+        <input type="text" id="allergies" placeholder="e.g., Peanuts, Penicillin">
+
+        <label for="abha-id">ABHA Health ID:</label>
+        <input type="text" id="abha-id" placeholder="e.g., 12-digit ABHA ID">
+
+        <label for="emergency-contact">Emergency Contact:</label>
+        <input type="text" id="emergency-contact" placeholder="e.g., +91 9876543210">
+
+        <label for="insurance">Health Insurance Scheme:</label>
+        <input type="text" id="insurance" placeholder="e.g., Ayushman Bharat, Private">
+
+        <label for="conditions">Chronic Conditions:</label>
+        <input type="text" id="conditions" placeholder="e.g., Diabetes, Hypertension">
+
+        <button type="submit" class="btn btn-primary small">Save All Details</button>
+      </form>
+    </div>
+
+    <!-- Health Records Tab -->
+    <div id="tab-records" class="tab-panel">
+      <h2>Health Records</h2>
+      <form id="record-form" class="form-inline">
+        <input type="text" id="record-description" placeholder="Description" required>
+        <input type="file" id="record-file" required>
+        <button type="submit" class="btn btn-primary">Add Record</button>
+      </form>
+      <div id="record-container" class="item-container"></div>
+    </div>
+
+    <!-- Reminders Tab -->
+    <div id="tab-reminders" class="tab-panel">
+      <h2>Medication Reminders</h2>
+      <form id="reminder-form" class="form-inline">
+        <input type="text" id="medication-name" placeholder="Medication Name" required>
+        <input type="time" id="reminder-time" required>
+        <button type="submit" class="btn btn-primary">Add Reminder</button>
+      </form>
+      <div id="reminder-container" class="item-container"></div>
+    </div>
+
+    <!-- Appointments Tab -->
+    <div id="tab-appointments" class="tab-panel">
+      <h2>Doctor Appointments</h2>
+      <form id="appointment-form" class="form-inline">
+        <input type="text" id="appointment-doctor" placeholder="Doctor Name" required>
+        <input type="date" id="appointment-date" required>
+        <input type="time" id="appointment-time" required>
+        <button type="submit" class="btn btn-primary">Add Appointment</button>
+      </form>
+      <div id="appointment-container" class="item-container"></div>
+    </div>
+
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+/* login.css - Login Page Styling */
+body {
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+/* Add this to your CSS */
+body {
+  background: url('medicalbg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.auth-container {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  max-width: 400px;
+  width: 90%;
+}
+
+.auth-container h2 {
+  text-align: center;
+  color: #1e3a5f;
+  margin-bottom: 20px;
+}
+
+.auth-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background: #0077cc;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #005fa3;
+}
+
+p {
+  text-align: center;
+  margin-top: 15px;
+}
+
+p a {
+  color: #0077cc;
+  text-decoration: none;
+}
